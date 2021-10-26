@@ -30,5 +30,22 @@ class CostumesController < ApplicationController
         head :costume
     end
 
-    
+    private 
+
+    def find_costume
+        Costume.find(params[:id])
+    end
+
+    def costume_params
+        params.permit(:person, :img_url, :user)
+    end
+
+    def render_unprocessable_entity_response(invalid)
+        render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
+    end
+
+    def render_not_found_response(invalid)
+        render json: {error: "Bird not found" }, status: :not_found
+    end
+
 end
