@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import HalloweenPage from "./HalloweenPage";
 import Header from "./Header";
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
             <h1>Test Route</h1>
           </Route>
           <Route path="/">
-            <h1>Page Count: {count}</h1>
+            <HalloweenPage 
+            />
           </Route>
         </Switch>
       </div>
