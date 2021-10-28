@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 function NewPlantForm({addCostume}) {
   const [formData, setFormData] = useState({
-    name: '',
+    costume: '',
     image: '',
     person: '',
   })
@@ -26,14 +26,8 @@ function NewPlantForm({addCostume}) {
 
   return (
     <div className="new-costume-form">
-      <h2>New Plant</h2>
+      <h2>New Costume</h2>
       <form>
-        <input 
-          type="text" 
-          name="name" 
-          placeholder="Costume name" 
-          value={formData.name} 
-          onChange={handleChange}/>
         <input 
           type="text" 
           name="image" 
@@ -45,6 +39,12 @@ function NewPlantForm({addCostume}) {
           name="person" 
           placeholder="Your name" 
           value={formData.person}
+          onChange={handleChange}/>
+          <input 
+          type="text" 
+          name="costume" 
+          placeholder="Costume name" 
+          value={formData.costume} 
           onChange={handleChange}/>
         <button type="submit" onClick={handleSubmit}>Add Plant</button>
       </form>

@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   function addCostume(formData){
-    console.log(formData.name)
+    console.log(formData.costume)
     fetch("/costumes", {
       method: "POST",
       headers: {
@@ -26,7 +26,7 @@ function App() {
       body: JSON.stringify({
         person: formData.person,
         img_url: formData.image,
-        name: formData.name
+        name: formData.costume
       })
     })
     .then((r)=>r.json())
