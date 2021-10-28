@@ -3,7 +3,7 @@ import React from "react";
 import HalloweenList from "./HalloweenList";
 // import Search from "./Search";
 
-function HalloweenPage() {
+function HalloweenPage({itemsToRender}) {
   return (
     <main>
       {/* <NewPlantForm addPlant={addPlant}/>
