@@ -1,7 +1,7 @@
 class CostumesController < ApplicationController
     wrap_parameters format:[]
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-    rescue_from ActiveRecord::RecordInvalid with: :render_unprocessable_entity_response
+
 
     def index
         costumes = Costume.all
@@ -40,12 +40,8 @@ class CostumesController < ApplicationController
         params.permit(:person, :img_url, :user)
     end
 
-    def render_unprocessable_entity_response(invalid)
-        render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
-    end
-
     def render_not_found_response(invalid)
-        render json: {error: "Bird not found" }, status: :not_found
+        render json: {error: "costume not found" }, status: :not_found
     end
 
 end

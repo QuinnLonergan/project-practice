@@ -16,7 +16,7 @@ function App() {
 
 
   useEffect(() => { 
-    fetch("/costume")
+    fetch("/costumes")
     .then((r)=>r.json())
     .then((data) => {
       setPlants(data)
