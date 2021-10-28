@@ -7,12 +7,33 @@ function App() {
   const [count, setCount] = useState(0);
   const [plants, setPlants] = useState([])
   const [itemsToRender, setItemsToRender] = useState([])
+  // const [searchItem, setSearchItem] = useState('')
+
 
   useEffect(() => {
     fetch("/hello")
       .then((r) => r.json())
       .then((data) => setCount(data.count));
   }, []);
+
+  function addCostume(formData){
+    console.log(formData.name)
+    fetch("/costumes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        person: formData.person,
+        img_url: formData.image,
+        name: formData.name
+      })
+    })
+    .then((r)=>r.json())
+    .then((data) => {
+      setPlants([...plants, data])
+    })
+  }
 
 
   useEffect(() => { 
@@ -23,6 +44,10 @@ function App() {
       setItemsToRender(data)
     })
   }, []);
+
+  // function setSearchItemInApp(searchItem){
+  //   setSearchItem(searchItem)
+  // }
 
 
 // useEffect(() => {
@@ -43,6 +68,7 @@ function App() {
           <Route path="/">
             <HalloweenPage 
             itemsToRender={itemsToRender}
+            addCostume={addCostume}
             />
           </Route>
         </Switch>
