@@ -1,19 +1,8 @@
-// import React from "react";
-// import NewCostumeForm from "./NewCostumeForm";
-// import HalloweenList from "./HalloweenList";
-// // import Search from "./Search";
+import React from "react";
+import NewCostumeForm from "./NewCostumeForm";
+import HalloweenList from "./HalloweenList";
+// import Search from "./Search";
 
-// function HalloweenPage({itemsToRender, addCostume}) {
-//   return (
-//     <main>
-//       {/* <NewPlantForm addPlant={addPlant}/>
-//       <Search setSearchItemInApp={setSearchItemInApp} 
-//       /> */}
-//       <NewCostumeForm addCostume={addCostume}/>
-//       <HalloweenList itemsToRender={itemsToRender}/>
-//     </main>
-//   );
-// }
 
 // export default HalloweenPage;
 
@@ -96,11 +85,13 @@ export default function HalloweenPage() {
             >
               <Button variant="contained">Main call to action</Button>
               <Button variant="outlined">Secondary action</Button>
+              <NewCostumeForm addCostume={addCostume}/>
             </Stack>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
+          <HalloweenList itemsToRender={itemsToRender}/>
           <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
