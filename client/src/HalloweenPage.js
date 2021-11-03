@@ -1,8 +1,6 @@
-import React from "react";
 import NewCostumeForm from "./NewCostumeForm";
 import HalloweenList from "./HalloweenList";
 // import Search from "./Search";
-
 
 // export default HalloweenPage;
 
@@ -41,7 +39,7 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const theme = createTheme();
 
-export default function HalloweenPage() {
+export default function HalloweenPage({itemsToRender, addCostume}) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
