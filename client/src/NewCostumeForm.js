@@ -96,8 +96,8 @@ function NewPlantForm({addCostume}) {
               fullWidth
               id="costume"
               label="Costume name"
-              name="name"
-              autoComplete="name"
+              name="costume"
+              autoComplete="costume"
               autoFocus
             />
         <Button
@@ -107,7 +107,7 @@ function NewPlantForm({addCostume}) {
               sx={{ mt: 3, mb: 2 }}
               onClick={handleSubmit}
             >
-              Add Plant
+              Add Costume
         </Button>
       </form>
       </Box>
