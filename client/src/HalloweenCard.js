@@ -35,8 +35,8 @@ function HalloweenCard({name, image, person}) {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Button size="small">Like</Button>
+                    <Button size="small">Dislike</Button>
                   </CardActions>
                 </Card>
               </Grid>
