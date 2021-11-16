@@ -37,7 +37,7 @@ function NewPlantForm({addCostume}) {
     <div className="new-costume-form">
       <h2>New Costume</h2>
       <form>
-        <input 
+        {/* <input 
           type="text" 
           name="image" 
           placeholder="Image URL" 
@@ -54,8 +54,43 @@ function NewPlantForm({addCostume}) {
           name="costume" 
           placeholder="Costume name" 
           value={formData.costume} 
-          onChange={handleChange}/>
-        <button type="submit" onClick={handleSubmit}>Add Plant</button>
+          onChange={handleChange}/> */}
+          <TextField
+              value={formData.image}
+              onChange={handleChange}
+              margin="normal"
+              required
+              fullWidth
+              id="image"
+              label="Image URL"
+              name="image"
+              autoComplete="image"
+              autoFocus
+            />
+          <TextField
+              value={formData.person}
+              onChange={handleChange}
+              margin="normal"
+              required
+              fullWidth
+              id="person"
+              label="Creators name"
+              name="person"
+              autoComplete="person"
+              autoFocus
+            />
+          <TextField
+              value={formData.costume}
+              onChange={handleChange}
+              margin="normal"
+              required
+              fullWidth
+              id="costume"
+              label="Costume name"
+              name="name"
+              autoComplete="name"
+              autoFocus
+            />
         <Button
               type="submit"
               fullWidth
