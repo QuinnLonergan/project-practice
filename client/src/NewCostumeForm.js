@@ -34,8 +34,19 @@ function NewPlantForm({addCostume}) {
   }
 
   return (
-    <div className="new-costume-form">
-      <h2>New Costume</h2>
+    <Container className="new-costume-form" component="main" maxWidth="xs">
+      <CssBaseline />
+      <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+      <Typography component="h1" variant="h5">
+            Sign in
+      </Typography>
       <form>
         {/* <input 
           type="text" 
@@ -101,62 +112,63 @@ function NewPlantForm({addCostume}) {
               Add Plant
         </Button>
       </form>
-      {/* <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
-          sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              margin="normal"
-              required
-              fullWidth
-              id="username"
-              label="Username"
-              name="username"
-              autoComplete="username"
-              autoFocus
-            />
-            <TextField
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              margin="normal"
-              required
-              fullWidth
-              helperText={errors}
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
-            </Button>
+      </Box>
+      </Container>
+      // <Container component="main" maxWidth="xs">
+      //   <CssBaseline />
+      //   <Box
+      //     sx={{
+      //       marginTop: 8,
+      //       display: 'flex',
+      //       flexDirection: 'column',
+      //       alignItems: 'center',
+      //     }}
+      //   >
+      //     <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+      //       <LockOutlinedIcon />
+      //     </Avatar>
+      //     <Typography component="h1" variant="h5">
+      //       Sign in
+      //     </Typography>
+      //     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+      //       <TextField
+      //         value={username}
+      //         onChange={(e) => setUsername(e.target.value)}
+      //         margin="normal"
+      //         required
+      //         fullWidth
+      //         id="username"
+      //         label="Username"
+      //         name="username"
+      //         autoComplete="username"
+      //         autoFocus
+      //       />
+      //       <TextField
+      //         value={password}
+      //         onChange={(e) => setPassword(e.target.value)}
+      //         margin="normal"
+      //         required
+      //         fullWidth
+      //         helperText={errors}
+      //         name="password"
+      //         label="Password"
+      //         type="password"
+      //         id="password"
+      //         autoComplete="current-password"
+      //       />
+      //       <Button
+      //         type="submit"
+      //         fullWidth
+      //         variant="contained"
+      //         sx={{ mt: 3, mb: 2 }}
+      //       >
+      //         Sign In
+      //       </Button>
             
-          </Box>
-        </Box>
-      </Container> */}
-    </div>
-  );
+      //     </Box>
+      //   </Box>
+      // </Container>
+      );
 }
 
 export default NewPlantForm;
