@@ -5,7 +5,6 @@ import HalloweenList from "./HalloweenList";
 // export default HalloweenPage;
 
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -64,8 +63,6 @@ export default function HalloweenPage({itemsToRender, addCostume}) {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
               <NewCostumeForm addCostume={addCostume}/>
             </Stack>
           </Container>
