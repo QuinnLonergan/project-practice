@@ -43,7 +43,7 @@ function NewPlantForm({addCostume}) {
           }}
         >
       <Typography component="h1" variant="h5">
-            Sign in
+            Add a Costume
       </Typography>
       <form>
         {/* <input 
