@@ -2,6 +2,22 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HalloweenPage from "./HalloweenPage";
 import Header from "./Header";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
+const theme = createTheme(
+  {
+    palette: {
+      type: 'light',
+      primary: {
+        main: '#f57c00',
+      },
+      secondary: {
+        main: '#000000',
+      },
+    }
+  }
+);
 
 function App() {
   const [plants, setPlants] = useState([])
@@ -51,6 +67,7 @@ function App() {
   }, [render]);
 
   return (
+    <ThemeProvider theme={theme}>
     <BrowserRouter>
       <div className="App">
         <Header />
@@ -68,6 +85,7 @@ function App() {
         </Switch>
       </div>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

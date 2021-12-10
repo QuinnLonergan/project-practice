@@ -29,7 +29,21 @@ function Copyright() {
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const theme = createTheme();
+const theme = createTheme(
+  {
+    palette: {
+      type: 'light',
+      primary: {
+        main: '#f57c00',
+      },
+      secondary: {
+        main: '#000000',
+      },
+    }
+  }
+);
+
+
 
 export default function HalloweenPage({itemsToRender, addCostume, handleDelete}) {
   return (
