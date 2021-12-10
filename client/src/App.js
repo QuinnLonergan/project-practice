@@ -18,11 +18,14 @@ const theme = createTheme(
         main: '#000000',
       },
       background: {
-        default: '#000000'
-      }
-    }
+        default: '#000000',
+        paper: '#ffe0b2',
+      },
+    },
   }
 );
+
+
 
 function App() {
   const [plants, setPlants] = useState([])
