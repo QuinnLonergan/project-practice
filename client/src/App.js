@@ -4,10 +4,8 @@ import HalloweenPage from "./HalloweenPage";
 import Header from "./Header";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [plants, setPlants] = useState([])
   const [itemsToRender, setItemsToRender] = useState([])
-  // const [searchItem, setSearchItem] = useState('')
   const [render, setRender] = useState(true);
 
   function handleDelete(id){
@@ -22,11 +20,6 @@ function App() {
 }
 
 
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
 
   function addCostume(formData){
     console.log(formData.costume)
@@ -56,18 +49,6 @@ function App() {
       setItemsToRender(data)
     })
   }, [render]);
-
-  // function setSearchItemInApp(searchItem){
-  //   setSearchItem(searchItem)
-  // }
-
-
-// useEffect(() => {
-//   let searchedPlants = plants.filter((plant) => {
-//     return plant.name.includes(searchItem)
-//   })
-//   setItemsToRender(searchedPlants)
-// }, [searchItem, plants])
 
   return (
     <BrowserRouter>
