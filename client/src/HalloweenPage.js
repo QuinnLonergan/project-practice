@@ -19,7 +19,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        HallowsEve
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -77,7 +77,7 @@ export default function HalloweenPage({itemsToRender, addCostume}) {
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          
         </Typography>
         <Typography
           variant="subtitle1"
@@ -85,7 +85,7 @@ export default function HalloweenPage({itemsToRender, addCostume}) {
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          Made by Quinn Lonergan
         </Typography>
         <Copyright />
       </Box>
