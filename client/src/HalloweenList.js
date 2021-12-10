@@ -11,6 +11,7 @@ function HalloweenList({itemsToRender}) {
         person={halloween.person}
         name={halloween.name}
         image={halloween.img_url}
+        id={halloween.id}
       />
     ))}
     </>
