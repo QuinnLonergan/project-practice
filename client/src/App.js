@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HalloweenPage from "./HalloweenPage";
 import Header from "./Header";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
 
 
 const theme = createTheme(
@@ -15,6 +17,9 @@ const theme = createTheme(
       secondary: {
         main: '#000000',
       },
+      background: {
+        default: '#000000'
+      }
     }
   }
 );
@@ -68,6 +73,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
     <BrowserRouter>
       <div className="App">
         <Header />

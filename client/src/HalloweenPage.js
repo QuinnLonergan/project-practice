@@ -5,7 +5,6 @@ import HalloweenList from "./HalloweenList";
 // export default HalloweenPage;
 
 import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -47,8 +46,7 @@ const theme = createTheme(
 
 export default function HalloweenPage({itemsToRender, addCostume, handleDelete}) {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
       <main>
         {/* Hero unit */}
         <Box
@@ -107,6 +105,6 @@ export default function HalloweenPage({itemsToRender, addCostume, handleDelete})
         <Copyright />
       </Box>
       {/* End footer */}
-    </ThemeProvider>
+    </>
   );
 }
