@@ -13,13 +13,21 @@ function HalloweenCard({name, image, person, id, handleDelete}) {
 
 
 
+
   return (
     <Grid item key={name} xs={12} sm={6} md={4}>
                 <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                margin= 'auto'
+                  sx={{ 
+                    height: '100%', 
+                    display: 'flex', 
+                    flexDirection: 'column' }}
                 >
                   <CardMedia
                     component="img"
+                    height= "550"
+                    width='100%'
+                    objectFit='cover'
                     sx={{
                       // 16:9
                       pt: '56.25%',
