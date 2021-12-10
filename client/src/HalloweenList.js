@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import HalloweenCard from "./HalloweenCard";
 
-function HalloweenList({itemsToRender}) {
+function HalloweenList({itemsToRender, handleDelete}) {
+
 
   return (
     <>
@@ -12,6 +13,7 @@ function HalloweenList({itemsToRender}) {
         name={halloween.name}
         image={halloween.img_url}
         id={halloween.id}
+        handleDelete={handleDelete}
       />
     ))}
     </>

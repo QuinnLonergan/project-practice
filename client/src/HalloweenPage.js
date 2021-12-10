@@ -31,7 +31,7 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const theme = createTheme();
 
-export default function HalloweenPage({itemsToRender, addCostume}) {
+export default function HalloweenPage({itemsToRender, addCostume, handleDelete}) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -70,7 +70,10 @@ export default function HalloweenPage({itemsToRender, addCostume}) {
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-          <HalloweenList itemsToRender={itemsToRender}/>
+          <HalloweenList 
+            itemsToRender={itemsToRender}
+            handleDelete={handleDelete}
+            />
           </Grid>
         </Container>
       </main>

@@ -8,6 +8,18 @@ function App() {
   const [plants, setPlants] = useState([])
   const [itemsToRender, setItemsToRender] = useState([])
   // const [searchItem, setSearchItem] = useState('')
+  const [render, setRender] = useState(true);
+
+  function handleDelete(id){
+    fetch(`/costumes/${id}`, {
+        method: 'DELETE',
+        headers: {
+            Accept: 'application/json',
+            "Content-Type": "application/json"
+        }
+    })
+    setRender(!render)
+}
 
 
   useEffect(() => {
@@ -43,7 +55,7 @@ function App() {
       setPlants(data)
       setItemsToRender(data)
     })
-  }, []);
+  }, [render]);
 
   // function setSearchItemInApp(searchItem){
   //   setSearchItem(searchItem)
@@ -69,6 +81,7 @@ function App() {
             <HalloweenPage 
             itemsToRender={itemsToRender}
             addCostume={addCostume}
+            handleDelete={handleDelete}
             />
           </Route>
         </Switch>

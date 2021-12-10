@@ -9,18 +9,8 @@ import Button from '@mui/material/Button';
 
 
 
-function HalloweenCard({name, image, person, id}) {
+function HalloweenCard({name, image, person, id, handleDelete}) {
 
-
-  function handleDelete(id){
-    fetch(`/costumes/${id}`, {
-        method: 'DELETE',
-        headers: {
-            Accept: 'application/json',
-            "Content-Type": "application/json"
-        }
-    })
-}
 
 
   return (
