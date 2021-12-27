@@ -57,13 +57,13 @@ function Header() {
             <ListItemIcon>
               <AccountCircleIcon />
             </ListItemIcon>
-            <ListItemText  primary={'Home'} />
+            <ListItemText  primary={'ENTER HERE'} />
           </ListItemButton>
           <ListItemButton component={Link} to={'/custom'} key={'Custom Stacks'}>
             <ListItemIcon>
               <LocalMoviesIcon />
             </ListItemIcon>
-            <ListItemText primary={'Custom Stacks'} />
+            <ListItemText primary={'ENTER HERE'} />
           </ListItemButton>
       </List>
     </Box>
