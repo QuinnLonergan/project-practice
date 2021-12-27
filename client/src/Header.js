@@ -30,10 +30,6 @@ function Header() {
         <Typography align='left' variant="h6" component="div" sx={{ flexGrow: 1 }}>
           MovieStack
         </Typography>
-        <IconButton sx={{ ml: 1 }} onClick={() => setLight((prev) => !prev)} color="inherit">
-              {light === false ? <Brightness7Icon /> : <Brightness4Icon />}
-          </IconButton>
-        <Button onClick={handleLogoutClick} color="inherit">Logout</Button>
       </Toolbar>
     </AppBar>
   </Box>
