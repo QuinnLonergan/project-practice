@@ -7,14 +7,36 @@ import Typography from '@mui/material/Typography';
 
 function Header() {
   return (
-    <AppBar position="relative">
-    <Toolbar>
-      <CameraIcon sx={{ mr: 2 }} />
-      <Typography variant="h6" color="inherit" noWrap>
-        HallowsEve
-      </Typography>
-    </Toolbar>
-  </AppBar>
+    <Box sx={{ flexGrow: 1 }}>
+    <AppBar position="static">
+      <Toolbar>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ mr: 2 }}
+          onClick={toggleDrawer(anchor, true)}
+        >
+          <MenuIcon />
+        </IconButton >
+        <Drawer
+          anchor={anchor}
+          open={state[anchor]}
+          onClose={toggleDrawer(anchor, false)}
+        >
+          {list(anchor)}
+        </Drawer>
+        <Typography align='left' variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          MovieStack
+        </Typography>
+        <IconButton sx={{ ml: 1 }} onClick={() => setLight((prev) => !prev)} color="inherit">
+              {light === false ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
+        <Button onClick={handleLogoutClick} color="inherit">Logout</Button>
+      </Toolbar>
+    </AppBar>
+  </Box>
   );
 }
 
