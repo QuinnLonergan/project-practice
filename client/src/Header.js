@@ -65,6 +65,18 @@ function Header() {
             </ListItemIcon>
             <ListItemText primary={'ENTER HERE'} />
           </ListItemButton>
+          <ListItemButton component={Link} to={'/custom'} key={'Custom Stacks'}>
+            <ListItemIcon>
+              <LocalMoviesIcon />
+            </ListItemIcon>
+            <ListItemText primary={'ENTER HERE'} />
+          </ListItemButton>
+          <ListItemButton component={Link} to={'/custom'} key={'Custom Stacks'}>
+            <ListItemIcon>
+              <LocalMoviesIcon />
+            </ListItemIcon>
+            <ListItemText primary={'ENTER HERE'} />
+          </ListItemButton>
       </List>
     </Box>
   );
