@@ -21,6 +21,53 @@ import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
 
 
 function Header() {
+
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List
+      aria-labelledby="nested-list-subheader"
+      subheader={
+        <ListSubheader component="div" id="nested-list-subheader">
+          {`logged in as: ${user.username}`}
+        </ListSubheader>
+      }>
+          <ListItemButton component={Link} to={'/'} key={'Home'}>
+            <ListItemIcon>
+              <AccountCircleIcon />
+            </ListItemIcon>
+            <ListItemText  primary={'Home'} />
+          </ListItemButton>
+          <ListItemButton component={Link} to={'/custom'} key={'Custom Stacks'}>
+            <ListItemIcon>
+              <LocalMoviesIcon />
+            </ListItemIcon>
+            <ListItemText primary={'Custom Stacks'} />
+          </ListItemButton>
+      </List>
+    </Box>
+  );
+
+
   return (
     <Box sx={{ flexGrow: 1 }}>
     <AppBar position="static">
