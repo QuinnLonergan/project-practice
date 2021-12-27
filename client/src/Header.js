@@ -29,6 +29,8 @@ function Header() {
     right: false,
   });
 
+  const anchor = 'left'
+
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -48,7 +50,7 @@ function Header() {
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
-          {`logged in as: ${user.username}`}
+          {`logged in as: `}
         </ListSubheader>
       }>
           <ListItemButton component={Link} to={'/'} key={'Home'}>
