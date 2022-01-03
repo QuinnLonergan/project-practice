@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 
 
 
-function HalloweenCard({name, image, person, id, handleDelete}) {
+function HalloweenCard({name, image, person, id, vote, handleDelete}) {
 
   function vote(voteCount){
     fetch("/costumes", {

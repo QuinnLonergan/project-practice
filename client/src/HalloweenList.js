@@ -12,6 +12,7 @@ function HalloweenList({itemsToRender, handleDelete}) {
         person={halloween.person}
         name={halloween.name}
         image={halloween.img_url}
+        vote={halloween.vote}
         id={halloween.id}
         handleDelete={handleDelete}
       />
