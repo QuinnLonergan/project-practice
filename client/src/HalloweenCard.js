@@ -11,6 +11,25 @@ import Button from '@mui/material/Button';
 
 function HalloweenCard({name, image, person, id, handleDelete}) {
 
+  function addCostume(formData){
+    console.log(formData.costume)
+    fetch("/costumes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        person: formData.person,
+        img_url: formData.image,
+        name: formData.costume
+      })
+    })
+    .then((r)=>r.json())
+    .then((data) => {
+      setPlants([...plants, data])
+    })
+  }
+
 
 
 
