@@ -55,7 +55,8 @@ function App() {
       body: JSON.stringify({
         person: formData.person,
         img_url: formData.image,
-        name: formData.costume
+        name: formData.costume,
+        vote: formData.vote
       })
     })
     .then((r)=>r.json())

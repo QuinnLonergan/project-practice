@@ -12,6 +12,7 @@ function NewPlantForm({addCostume}) {
     costume: '',
     image: '',
     person: '',
+    vote: 0,
   })
 
   function handleChange(e){

@@ -18,7 +18,7 @@ function HalloweenCard({name, image, person, id, vote, handleDelete}) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        vote: voteCount+1
+        vote: vote+1
       })
     })
   }
@@ -51,7 +51,7 @@ function HalloweenCard({name, image, person, id, vote, handleDelete}) {
                       Made by {person}
                     </Typography>
                     <Typography>
-                      Votes: {votes}
+                      Votes: {vote}
                     </Typography>
                   </CardContent>
                   <CardActions>
