@@ -50,6 +50,9 @@ function HalloweenCard({name, image, person, id, handleDelete}) {
                     <Typography>
                       Made by {person}
                     </Typography>
+                    <Typography>
+                      Votes: {votes}
+                    </Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small">Like</Button>
