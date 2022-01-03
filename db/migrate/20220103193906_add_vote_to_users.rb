@@ -1,5 +1,5 @@
-class AddVoteToUsers < ActiveRecord::Migration[6.1]
+class AddVoteToCostumes < ActiveRecord::Migration[6.1]
   def change
-    add_column :users, :vote, :int
+    add_column :costumes, :vote, :int
   end
 end
