@@ -14,14 +14,12 @@ function HalloweenCard({name, image, person, id, handleDelete}) {
   function addCostume(formData){
     console.log(formData.costume)
     fetch("/costumes", {
-      method: "POST",
+      method: "UPDATE",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        person: formData.person,
-        img_url: formData.image,
-        name: formData.costume
+        vote: formData.person,
       })
     })
     .then((r)=>r.json())
