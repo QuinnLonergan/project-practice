@@ -37,7 +37,7 @@ class CostumesController < ApplicationController
     end
 
     def costume_params
-        params.permit(:person, :img_url, :name)
+        params.permit(:person, :img_url, :name, :vote)
     end
 
     def render_not_found_response(invalid)
