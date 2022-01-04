@@ -47,24 +47,6 @@ function NewPlantForm({addCostume}) {
             Add a Costume
       </Typography>
       <form>
-        {/* <input 
-          type="text" 
-          name="image" 
-          placeholder="Image URL" 
-          value={formData.image}
-          onChange={handleChange}/>
-        <input 
-          type="text" 
-          name="person" 
-          placeholder="Your name" 
-          value={formData.person}
-          onChange={handleChange}/>
-          <input 
-          type="text" 
-          name="costume" 
-          placeholder="Costume name" 
-          value={formData.costume} 
-          onChange={handleChange}/> */}
           <TextField
               value={formData.image}
               onChange={handleChange}
