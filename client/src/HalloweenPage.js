@@ -1,9 +1,5 @@
 import NewCostumeForm from "./NewCostumeForm";
 import HalloweenList from "./HalloweenList";
-// import Search from "./Search";
-
-// export default HalloweenPage;
-
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
