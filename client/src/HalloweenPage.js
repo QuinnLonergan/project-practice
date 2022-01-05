@@ -44,7 +44,6 @@ export default function HalloweenPage({itemsToRender, addCostume, handleDelete})
   return (
     <>
       <main>
-        {/* Hero unit */}
         <Box
           sx={{
             bgcolor: 'background.paper',
@@ -76,7 +75,6 @@ export default function HalloweenPage({itemsToRender, addCostume, handleDelete})
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
-          {/* End hero unit */}
           <Grid container spacing={4}>
           <HalloweenList 
             itemsToRender={itemsToRender}
@@ -85,7 +83,6 @@ export default function HalloweenPage({itemsToRender, addCostume, handleDelete})
           </Grid>
         </Container>
       </main>
-      {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
           
@@ -100,7 +97,6 @@ export default function HalloweenPage({itemsToRender, addCostume, handleDelete})
         </Typography>
         <Copyright />
       </Box>
-      {/* End footer */}
     </>
   );
 }
