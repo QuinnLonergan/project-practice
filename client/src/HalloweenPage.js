@@ -22,19 +22,7 @@ function Copyright() {
   );
 }
 
-const theme = createTheme(
-  {
-    palette: {
-      type: 'light',
-      primary: {
-        main: '#f57c00',
-      },
-      secondary: {
-        main: '#000000',
-      },
-    }
-  }
-);
+
 
 
 
